@@ -1,0 +1,72 @@
+name: coding-practicum-haskell
+version: 0.1.0.0
+github: "githubuser/coding-practicum-haskell"
+license: BSD3
+author: "Author name here"
+maintainer: "example@example.com"
+copyright: "2021 Author name here"
+
+extra-source-files:
+  - README.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/githubuser/coding-practicum-haskell#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - aeson
+  - bytestring
+  - postgresql-simple
+  - raw-strings-qq
+  - http-types
+  - hspec-wai-json
+  - hspec
+  - hspec-wai
+  - HUnit
+  - servant-server
+  - wai
+  - warp
+
+library:
+  source-dirs: src
+
+executables:
+  coding-practicum-haskell-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -fwarn-unused-imports
+    dependencies:
+      - base
+      - coding-practicum-haskell
+    default-extensions:
+      - OverloadedStrings
+
+tests:
+  coding-practicum-haskell-test:
+    main: TestMain.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+      - -fwarn-unused-imports
+    dependencies:
+      - base
+      - coding-practicum-haskell
+      - hspec
+      - hspec-wai
+      - hspec-wai-json
+      - HUnit
+      - aeson
+    default-extensions:
+      - OverloadedStrings

@@ -1,0 +1,100 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.34.4.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: a8c5532896bd35d5002b410dcead6cad98e9cf5c541a26526a53d543d5a10bbb
+
+name:           coding-practicum-haskell
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/coding-practicum-haskell#readme>
+homepage:       https://github.com/githubuser/coding-practicum-haskell#readme
+bug-reports:    https://github.com/githubuser/coding-practicum-haskell/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2021 Author name here
+license:        BSD3
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/coding-practicum-haskell
+
+library
+  exposed-modules:
+      Api
+  other-modules:
+      Paths_coding_practicum_haskell
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit
+    , aeson
+    , base >=4.7 && <5
+    , bytestring
+    , hspec
+    , hspec-wai
+    , hspec-wai-json
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , servant-server
+    , wai
+    , warp
+  default-language: Haskell2010
+
+executable coding-practicum-haskell-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_coding_practicum_haskell
+  hs-source-dirs:
+      app
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -fwarn-unused-imports
+  build-depends:
+      HUnit
+    , aeson
+    , base
+    , bytestring
+    , coding-practicum-haskell
+    , hspec
+    , hspec-wai
+    , hspec-wai-json
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , servant-server
+    , wai
+    , warp
+  default-language: Haskell2010
+
+test-suite coding-practicum-haskell-test
+  type: exitcode-stdio-1.0
+  main-is: TestMain.hs
+  other-modules:
+      Paths_coding_practicum_haskell
+  hs-source-dirs:
+      test
+  default-extensions:
+      OverloadedStrings
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N -fwarn-unused-imports
+  build-depends:
+      HUnit
+    , aeson
+    , base
+    , bytestring
+    , coding-practicum-haskell
+    , hspec
+    , hspec-wai
+    , hspec-wai-json
+    , http-types
+    , postgresql-simple
+    , raw-strings-qq
+    , servant-server
+    , wai
+    , warp
+  default-language: Haskell2010
