@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.4.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: a8c5532896bd35d5002b410dcead6cad98e9cf5c541a26526a53d543d5a10bbb
+-- hash: ee4196f284f229d3c5c3eb10b7eb0a6609eb40dbd039f8c122a3f367525cde9d
 
 name:           coding-practicum-haskell
 version:        0.1.0.0
@@ -52,8 +52,7 @@ executable coding-practicum-haskell-exe
       Paths_coding_practicum_haskell
   hs-source-dirs:
       app
-  default-extensions:
-      OverloadedStrings
+  default-extensions: OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -fwarn-unused-imports
   build-depends:
       HUnit
@@ -79,8 +78,7 @@ test-suite coding-practicum-haskell-test
       Paths_coding_practicum_haskell
   hs-source-dirs:
       test
-  default-extensions:
-      OverloadedStrings
+  default-extensions: OverloadedStrings
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -fwarn-unused-imports
   build-depends:
       HUnit

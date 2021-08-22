@@ -1,0 +1,10 @@
+{
+	"name": "Haskell Coding Practicum",
+	"dockerFile": "Dockerfile",
+	"appPort": [
+		"3000"
+	],
+	"extensions": [
+		"haskell.haskell"
+	]
+}
