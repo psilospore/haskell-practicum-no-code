@@ -115,6 +115,11 @@ Any stack command
 docker container run -it --rm --mount type=bind,source="$(pwd)",target=/app app-stack [COMMAND]
 ```
 
+## 2FA
+
+To clone from the coding practicum repo you will need to enable 2FA:
+https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication
+
 ## Postman
 
 There's a postman collection with an example GET and POST request: `coding-practicum.postman_collection.json`
