@@ -18,8 +18,7 @@ Whether developing with or without docker the rest of the guide will walk you th
 1. A REPL to quickly itterate on code changes
    1. Use :reload after code changes
 1. A running server
-   1. This just needs to be re-run
-   1. You will be able
+   1. This won't reload automatically and you will need to re-run the command manually on changes.
 1. A postgres instance that you can also directly connect to.
 1. LSP support
 
@@ -33,9 +32,9 @@ Otherwise locally can work.
 1. Open the Repo:
    1. When you open the repo you will see a prompt to open up a remote container.Otherwise you may need to follow these steps: https://code.visualstudio.com/docs/remote/containers#_installation
 1. It will take some time for it to start: (10 to 15 mins)
-1. Create a new terminal and run `stack test --file-watch --fast`
-1. Create a new terminal and run `stack repl`
-1. Create a new terminal and run `stack run --fast`
+1. Create a new terminal and run `stack test --file-watch --fast --resolver lts-17.12`
+1. Create a new terminal and run `stack repl --resolver lts-17.12`
+1. Create a new terminal and run `stack run --fast --resolver lts-17.12`
 1. Go to PORTS > Add Port > 3000
 
 ### Locally
