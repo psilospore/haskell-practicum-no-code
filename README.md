@@ -18,7 +18,8 @@ Whether developing with or without docker the rest of the guide will walk you th
 1. A REPL to quickly itterate on code changes
    1. Use :reload after code changes
 1. A running server
-   1. This won't reload automatically and you will need to re-run the command manually on changes.
+   1. This just needs to be re-run
+   1. You will be able make requests to the server
 1. A postgres instance that you can also directly connect to.
 1. LSP support
 
@@ -34,7 +35,7 @@ Otherwise locally can work.
 1. It will take some time for it to start: (10 to 15 mins)
 1. Create a new terminal and run `stack test --file-watch --fast --resolver lts-17.12`
 1. Create a new terminal and run `stack repl --resolver lts-17.12`
-1. Create a new terminal and run `stack run --fast --resolver lts-17.12`
+1. Create a new terminal and run `stack run --resolver lts-17.12`
 1. Go to PORTS > Add Port > 3000
 
 ### Locally
@@ -46,7 +47,8 @@ Probably do this only if you already have stack and an LSP setup that works.
 1. Answer P to prepending to path
 1. Install postgres
    1. You can install from here: https://www.postgresql.org/download/ or use Docker `docker run --name practicum-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_USER=postgres --publish 5433:5432 -d postgres:12.5`
-   1. Update DB.hs to connect to localhost at port 5434 if using local postgres
+      1. Update DB.hs to connect to localhost.
+   1. If you have an instance of postgres running locally update DB.hs to connect to localhost at port 5432.
 
 Open multiple terminals for each of the following:
 
@@ -114,14 +116,14 @@ Any stack command
 docker container run -it --rm --mount type=bind,source="$(pwd)",target=/app app-stack [COMMAND]
 ```
 
+## Postman
+
+There's a postman collection with an example GET and POST request: `coding-practicum.postman_collection.json`
+
 ## 2FA
 
 To clone from the coding practicum repo you will need to enable 2FA:
 https://docs.github.com/en/github/authenticating-to-github/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication
-
-## Postman
-
-There's a postman collection with an example GET and POST request: `coding-practicum.postman_collection.json`
 
 # Practicum Problems
 
